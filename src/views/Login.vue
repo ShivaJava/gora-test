@@ -22,7 +22,7 @@
           <b-form-input
             id="email"
             type="email"
-            autocomplete="current-email"
+            autocomplete="username"
             v-model.trim="$v.form.email.$model" />
           <small 
             v-if="$v.form.email.$dirty && !$v.form.email.required"
