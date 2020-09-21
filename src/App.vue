@@ -10,7 +10,7 @@ export default {
     this.axios.interceptors.response.use(undefined, function (err) {
       return new Promise(function () {
         if (err.status === 401 && err.config && !err.config.__isRetryRequest) {
-          this.$store.dispatch("logout")
+          this.$store.commit('LOGOUT')
         }
         throw err;
       });

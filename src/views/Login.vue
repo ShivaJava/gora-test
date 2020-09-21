@@ -22,8 +22,9 @@
           <b-form-input
             id="email"
             type="email"
-            autocomplete="username"
-            v-model.trim="$v.form.email.$model" />
+            autocomplete="email"
+            v-model.trim="$v.form.email.$model"
+            autofocus />
           <small 
             v-if="$v.form.email.$dirty && !$v.form.email.required"
             class="text-danger">
@@ -44,10 +45,10 @@
             autocomplete="current-password"
             v-model.trim="$v.form.password.$model" />
             <small 
-            v-if="$v.form.password.$dirty && !$v.form.password.required"
-            class="text-danger">
-            Обязательное поле
-          </small>
+              v-if="$v.form.password.$dirty && !$v.form.password.required"
+              class="text-danger">
+              Обязательное поле
+            </small>
         </b-form-group>
       </b-card-body>
       <b-card-footer>
@@ -56,7 +57,7 @@
           type="submit"
           variant="outline-info">
           Войти
-          </b-button>
+        </b-button>
       </b-card-footer>
     </b-card>
   </div>
